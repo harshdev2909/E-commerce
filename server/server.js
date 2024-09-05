@@ -11,6 +11,8 @@ app.get("/",(req,res)=>{
 app.listen(port,() =>{
     console.log("Server is running");
 })
+//routes
+app.use('/user',require('./routes/useRoute'));
 
 //connect mongoDb
 const URL = process.env.MONGODB_URL;
