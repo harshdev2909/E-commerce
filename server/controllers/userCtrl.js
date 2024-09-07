@@ -109,4 +109,4 @@ const createrefreshToken = (payLoad) =>{
     return jwt.sign(payLoad,process.env.REFRESH_TOKEN_SECRET,{expiresIn:'1d'})
 }
 
-module.exports = userCtrl
+module.exports = userCtrl;
