@@ -16,6 +16,7 @@ app.listen(port,() =>{
 })
 //routes
 app.use('/user',require('./routes/useRoute'));
+app.use('/api',require('./routes/catogryRoute'));
 
 //connect mongoDb
 const URL = 'mongodb+srv://harshdev2909:harsh9560@cluster0.gkf5y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
