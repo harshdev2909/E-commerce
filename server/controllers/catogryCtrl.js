@@ -1,5 +1,5 @@
 const { response } = require('express');
-const Category = require('../models/catogryModels')
+const Category = require('../models/catogryModels');
 const catogryCtrl ={
     getCategories : async(req,res)=>{
         try{
