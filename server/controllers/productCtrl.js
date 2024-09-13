@@ -1,4 +1,4 @@
-const Products = require('../models/productModel')
+const Products = require('../models/productModel');
 
 
 class APIfeatures{
