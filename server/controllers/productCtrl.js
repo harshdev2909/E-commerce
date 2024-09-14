@@ -44,7 +44,7 @@ const productCtrl = {
     },
     createProduct:async(req,res)=>{
         try{
-            const {product_id,title,price,description,content,category} = req.body
+            const {product_id,title,price,description,images,content,category} = req.body
 
             const product = await Products.findOne({product_id})
 
@@ -52,7 +52,7 @@ const productCtrl = {
             return res.status(400).json({msg:"This product already Exists"})
 
             const newProduct = new Products({
-                product_id,title :title.toLowerCase(),price,description,content,category
+                product_id,title :title.toLowerCase(),price,images,description,content,category
             })
             await newProduct.save()
             res.json({msg:"Create a product"});
@@ -72,7 +72,7 @@ const productCtrl = {
     },
     updateProduct:async(req,res)=>{
         try{
-            const {product_id,title,price,description,content,category} = req.body
+            const {product_id,title,price,images,description,content,category} = req.body
 
             await Products.findOneAndUpdate({_id:req.params.id},{
                 title:title.toLowerCase(),price,description,content,category

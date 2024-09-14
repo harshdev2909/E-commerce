@@ -2,10 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
 const cookieParser = require('cookie-parser')
+const fileUpload = require('express-fileupload')
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser())
+app.use(fileUpload({
+    useTempFiles:true
+}))
 
 const port = process.env.port || 5000;
 app.get("/",(req,res)=>{
