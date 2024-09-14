@@ -12,8 +12,20 @@ const Header = () => {
 
         <div className='logo'>
             <h1>
-                <Link to='/'>30Dc shop</Link>
+               <Link to='/'>30Dc-shop</Link>  
             </h1>
+        </div>
+        <ul>
+            <li><Link to='/'>Products</Link></li>
+            <li><Link to='/login'>Login or Register</Link></li>
+
+            <li>
+                <MdClose width={30} className='menu'/>
+            </li>
+        </ul>
+        <div className='cart-icon'>
+            <span>0</span>
+            <Link><CiShoppingCart size={30}/></Link>
         </div>
     </header>
   )
